@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.segmax.portlet.sample.model.Appointment">
+		<field name="appId" type="long" />
+		<field name="appDate" type="Date" />
+		<field name="surgeryId" type="long" />
+		<field name="visitorId" type="long" />
+	</model>
+	<model name="com.segmax.portlet.sample.model.Schedule">
+		<field name="scheduleId" type="long" />
+		<field name="surgeryId" type="long" />
+		<field name="day" type="int" />
+		<field name="hour" type="int" />
+	</model>
+</model-hints>

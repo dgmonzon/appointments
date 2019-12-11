@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.segmax.portlet.sample.service.AppointmentLocalService" class="com.segmax.portlet.sample.service.impl.AppointmentLocalServiceImpl" />
+	<bean id="com.segmax.portlet.sample.service.AppointmentService" class="com.segmax.portlet.sample.service.impl.AppointmentServiceImpl" />
+	<bean id="com.segmax.portlet.sample.service.persistence.AppointmentPersistence" class="com.segmax.portlet.sample.service.persistence.AppointmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.segmax.portlet.sample.service.ScheduleLocalService" class="com.segmax.portlet.sample.service.impl.ScheduleLocalServiceImpl" />
+	<bean id="com.segmax.portlet.sample.service.ScheduleService" class="com.segmax.portlet.sample.service.impl.ScheduleServiceImpl" />
+	<bean id="com.segmax.portlet.sample.service.persistence.SchedulePersistence" class="com.segmax.portlet.sample.service.persistence.SchedulePersistenceImpl" parent="basePersistence" />
+</beans>

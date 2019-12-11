@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.segmax.portlet.sample.model.Appointment" />
+	<import class="com.segmax.portlet.sample.model.Schedule" />
+	<class name="com.segmax.portlet.sample.model.impl.AppointmentImpl" table="KT_Appointment">
+		<cache usage="read-write" />
+		<id name="appId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="appDate" type="org.hibernate.type.TimestampType" />
+		<property name="surgeryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="visitorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.segmax.portlet.sample.model.impl.ScheduleImpl" table="KT_Schedule">
+		<cache usage="read-write" />
+		<id name="scheduleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="surgeryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="day" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hour" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>
