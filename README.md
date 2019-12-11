@@ -1,2 +1,2 @@
-# appointments
+# Appointments
 This is a Liferay application
