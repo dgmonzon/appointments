@@ -38,6 +38,11 @@
 			<finder-column name="visitorId" />
 		</finder>
 		
+		<finder name="SurgeryAndAppDate" return-type="Collection">
+			<finder-column name="surgeryId" />
+			<finder-column name="appDate" />
+		</finder>
+		
 		<finder name="SurgeryAndVisitorAndAppDate" return-type="Collection">
 			<finder-column name="surgeryId" />
 			<finder-column name="visitorId" />

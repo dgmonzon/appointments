@@ -128,9 +128,15 @@ public class AppointmentLocalServiceClpInvoker {
 
 		_methodParameterTypes48 = new String[] { "java.lang.Long" };
 
-		_methodName49 = "getBySurgeryAndVisitorAndAppDate";
+		_methodName49 = "getBySurgeryAndAppDate";
 
 		_methodParameterTypes49 = new String[] {
+				"java.lang.Long", "java.util.Date"
+			};
+
+		_methodName50 = "getBySurgeryAndVisitorAndAppDate";
+
+		_methodParameterTypes50 = new String[] {
 				"java.lang.Long", "java.lang.Long", "java.util.Date"
 			};
 	}
@@ -256,6 +262,12 @@ public class AppointmentLocalServiceClpInvoker {
 
 		if (_methodName49.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
+			return AppointmentLocalServiceUtil.getBySurgeryAndAppDate((java.lang.Long)arguments[0],
+				(java.util.Date)arguments[1]);
+		}
+
+		if (_methodName50.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes50, parameterTypes)) {
 			return AppointmentLocalServiceUtil.getBySurgeryAndVisitorAndAppDate((java.lang.Long)arguments[0],
 				(java.lang.Long)arguments[1], (java.util.Date)arguments[2]);
 		}
@@ -307,4 +319,6 @@ public class AppointmentLocalServiceClpInvoker {
 	private String[] _methodParameterTypes48;
 	private String _methodName49;
 	private String[] _methodParameterTypes49;
+	private String _methodName50;
+	private String[] _methodParameterTypes50;
 }

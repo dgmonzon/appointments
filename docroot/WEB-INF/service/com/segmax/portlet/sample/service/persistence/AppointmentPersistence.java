@@ -314,6 +314,154 @@ public interface AppointmentPersistence extends BasePersistence<Appointment> {
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
+	* Returns all the appointments where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @return the matching appointments
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> findBySurgeryAndAppDate(
+		long surgeryId, java.util.Date appDate)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns a range of all the appointments where surgeryId = &#63; and appDate = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.segmax.portlet.sample.model.impl.AppointmentModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param start the lower bound of the range of appointments
+	* @param end the upper bound of the range of appointments (not inclusive)
+	* @return the range of matching appointments
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> findBySurgeryAndAppDate(
+		long surgeryId, java.util.Date appDate, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns an ordered range of all the appointments where surgeryId = &#63; and appDate = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.segmax.portlet.sample.model.impl.AppointmentModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param start the lower bound of the range of appointments
+	* @param end the upper bound of the range of appointments (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching appointments
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> findBySurgeryAndAppDate(
+		long surgeryId, java.util.Date appDate, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the first appointment in the ordered set where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching appointment
+	* @throws com.segmax.portlet.sample.NoSuchAppointmentException if a matching appointment could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public com.segmax.portlet.sample.model.Appointment findBySurgeryAndAppDate_First(
+		long surgeryId, java.util.Date appDate,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			com.segmax.portlet.sample.NoSuchAppointmentException;
+
+	/**
+	* Returns the first appointment in the ordered set where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching appointment, or <code>null</code> if a matching appointment could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public com.segmax.portlet.sample.model.Appointment fetchBySurgeryAndAppDate_First(
+		long surgeryId, java.util.Date appDate,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the last appointment in the ordered set where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching appointment
+	* @throws com.segmax.portlet.sample.NoSuchAppointmentException if a matching appointment could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public com.segmax.portlet.sample.model.Appointment findBySurgeryAndAppDate_Last(
+		long surgeryId, java.util.Date appDate,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			com.segmax.portlet.sample.NoSuchAppointmentException;
+
+	/**
+	* Returns the last appointment in the ordered set where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching appointment, or <code>null</code> if a matching appointment could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public com.segmax.portlet.sample.model.Appointment fetchBySurgeryAndAppDate_Last(
+		long surgeryId, java.util.Date appDate,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the appointments before and after the current appointment in the ordered set where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param appId the primary key of the current appointment
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next appointment
+	* @throws com.segmax.portlet.sample.NoSuchAppointmentException if a appointment with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public com.segmax.portlet.sample.model.Appointment[] findBySurgeryAndAppDate_PrevAndNext(
+		long appId, long surgeryId, java.util.Date appDate,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			com.segmax.portlet.sample.NoSuchAppointmentException;
+
+	/**
+	* Removes all the appointments where surgeryId = &#63; and appDate = &#63; from the database.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @throws SystemException if a system exception occurred
+	*/
+	public void removeBySurgeryAndAppDate(long surgeryId, java.util.Date appDate)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
+	* Returns the number of appointments where surgeryId = &#63; and appDate = &#63;.
+	*
+	* @param surgeryId the surgery ID
+	* @param appDate the app date
+	* @return the number of matching appointments
+	* @throws SystemException if a system exception occurred
+	*/
+	public int countBySurgeryAndAppDate(long surgeryId, java.util.Date appDate)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	/**
 	* Returns all the appointments where surgeryId = &#63; and visitorId = &#63; and appDate = &#63;.
 	*
 	* @param surgeryId the surgery ID

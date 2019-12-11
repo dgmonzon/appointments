@@ -308,6 +308,13 @@ public class AppointmentLocalServiceWrapper implements AppointmentLocalService,
 	}
 
 	@Override
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndAppDate(
+		java.lang.Long surgeryId, java.util.Date date)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _appointmentLocalService.getBySurgeryAndAppDate(surgeryId, date);
+	}
+
+	@Override
 	public java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndVisitorAndAppDate(
 		java.lang.Long surgeryId, java.lang.Long visitorId, java.util.Date date)
 		throws com.liferay.portal.kernel.exception.SystemException {

@@ -292,6 +292,12 @@ public class AppointmentLocalServiceUtil {
 		return getService().getByVisitor(visitorId);
 	}
 
+	public static java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndAppDate(
+		java.lang.Long surgeryId, java.util.Date date)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().getBySurgeryAndAppDate(surgeryId, date);
+	}
+
 	public static java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndVisitorAndAppDate(
 		java.lang.Long surgeryId, java.lang.Long visitorId, java.util.Date date)
 		throws com.liferay.portal.kernel.exception.SystemException {

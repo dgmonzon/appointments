@@ -55,7 +55,7 @@
 		while (cal.getTime().before(to.getTime())) {
 			if (cal.getTime().after(Calendar.getInstance().getTime())) {
 				Date appDate = dateFormatter.parse(dateFormatter.format(cal.getTime()));
-				List<Appointment> apps = AppointmentLocalServiceUtil.getBySurgeryAndVisitorAndAppDate(sch.getSurgeryId(), visitor.getUserId(), appDate);
+				List<Appointment> apps = AppointmentLocalServiceUtil.getBySurgeryAndAppDate(sch.getSurgeryId(), appDate);
 				Appointment app = null;
 				if (apps.size() > 0) {
 					app = apps.get(0);

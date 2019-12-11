@@ -59,6 +59,10 @@ public class AppointmentLocalServiceImpl extends AppointmentLocalServiceBaseImpl
 		return appointmentPersistence.findByVisitorId(visitorId);
 	}
 	
+	public List<Appointment> getBySurgeryAndAppDate(Long surgeryId, Date date) throws SystemException {
+		return appointmentPersistence.findBySurgeryAndAppDate(surgeryId, date);
+	}
+	
 	public List<Appointment> getBySurgeryAndVisitorAndAppDate(Long surgeryId, Long visitorId, Date date) throws SystemException {
 		return appointmentPersistence.findBySurgeryAndVisitorAndAppDate(surgeryId, visitorId, date);
 	}

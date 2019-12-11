@@ -45,10 +45,7 @@
 <%
 } else {
 %>
-	<liferay-ui:search-container-column-text
-		name=""
-		value="Not Available"
-	/>
+	Not Available
 <%
 }
 %>

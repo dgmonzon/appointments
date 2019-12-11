@@ -129,9 +129,15 @@ public class AppointmentLocalServiceClp implements AppointmentLocalService {
 
 		_methodParameterTypes21 = new String[] { "java.lang.Long" };
 
-		_methodName22 = "getBySurgeryAndVisitorAndAppDate";
+		_methodName22 = "getBySurgeryAndAppDate";
 
 		_methodParameterTypes22 = new String[] {
+				"java.lang.Long", "java.util.Date"
+			};
+
+		_methodName23 = "getBySurgeryAndVisitorAndAppDate";
+
+		_methodParameterTypes23 = new String[] {
 				"java.lang.Long", "java.lang.Long", "java.util.Date"
 			};
 	}
@@ -778,14 +784,48 @@ public class AppointmentLocalServiceClp implements AppointmentLocalService {
 	}
 
 	@Override
-	public java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndVisitorAndAppDate(
-		java.lang.Long surgeryId, java.lang.Long visitorId, java.util.Date date)
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndAppDate(
+		java.lang.Long surgeryId, java.util.Date date)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName22,
 					_methodParameterTypes22,
+					new Object[] {
+						ClpSerializer.translateInput(surgeryId),
+						
+					ClpSerializer.translateInput(date)
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (java.util.List<com.segmax.portlet.sample.model.Appointment>)ClpSerializer.translateOutput(returnObj);
+	}
+
+	@Override
+	public java.util.List<com.segmax.portlet.sample.model.Appointment> getBySurgeryAndVisitorAndAppDate(
+		java.lang.Long surgeryId, java.lang.Long visitorId, java.util.Date date)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName23,
+					_methodParameterTypes23,
 					new Object[] {
 						ClpSerializer.translateInput(surgeryId),
 						
@@ -858,4 +898,6 @@ public class AppointmentLocalServiceClp implements AppointmentLocalService {
 	private String[] _methodParameterTypes21;
 	private String _methodName22;
 	private String[] _methodParameterTypes22;
+	private String _methodName23;
+	private String[] _methodParameterTypes23;
 }
