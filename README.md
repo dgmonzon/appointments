@@ -24,7 +24,7 @@ _(Correrlo como administrador si hay algun error de permisos)_
     - Los módulos para los Representeatives se deben nombrar como “rep-xxxx-xxxx”
     - Los módulos para las Clinics se deben nombrar como “clinic-xxxx-xxxx”
     - Los módulos de servicios se deben nombrar como “rxtro-xxxx-xxxx”
-    - 
+    - Acordar el xxxx para que sea mas intuitivo
     - Nuevas sugerencias...
 - Dejar la descripción sugerida
 - Elegir “Y” en localization support
