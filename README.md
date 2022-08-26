@@ -1,6 +1,4 @@
-# Rxtro React Sample
-
-## **Modulo Basico de Liferay React**
+# Modulo Base de Liferay React
 
 
 Documentacion de Liferay React 7.2:
