@@ -3,7 +3,7 @@
 ## **Modulo Basico de Liferay React**
 
 
-Basado en la documentacion de Liferay 7.2:
+Documentacion de Liferay React 7.2:
 
 > [Developing a React-Application](https://help.liferay.com/hc/en-us/articles/360029028051-Developing-a-React-Application)
 
@@ -15,22 +15,25 @@ Basado en la documentacion de Liferay 7.2:
 - Tener instalado generator-liferay-js
 - - > npm install -g yo generator-liferay-js
 
-_(Correrlo como administrador si tira algun error de permisos)_
+_(Correrlo como administrador si hay algun error de permisos)_
 
 **Construir un nuevo modulo de React:**
-- Dentro del workspace de React ejecutar: yo liferay-js
+- Ubicarse en el workspace de React
+- Ejecutar: 
+- - > yo liferay-js
 - Seleccionar: React Widget
-- Tipear el nombre del modulo: Tener en cuenta la siguiente notación 
-    - Los módulos para los Representeatives se nombraran  como “rep-xxxx-xxxx”
-    - Los módulos para las Clinics se nombraran como “clinic-xxxx-xxxx”
-    - Los módulos de servicios se nombraran como “retro-xxxx-xxxx”
-    - …nuevas sugerencias.. bienvenidas!
+- Tipear el nombre del modulo: Tener en cuenta la siguiente nomenclatura: 
+    - Los módulos para los Representeatives se deben nombrar como “rep-xxxx-xxxx”
+    - Los módulos para las Clinics se deben nombrar como “clinic-xxxx-xxxx”
+    - Los módulos de servicios se deben nombrar como “rxtro-xxxx-xxxx”
+    - 
+    - Nuevas sugerencias...
 - Dejar la descripción sugerida
 - Elegir “Y” en localization support
 - Elegir “n” en configuration support
 - Tipear como nombre de categoría (respetar mayusculas y minúsculas): RxTro
-- Configurar la direccion al bundle de Liferay
-- Elegir que cree un contenido de ejemplo (sugerencia): Y
+- Configurar la direccion a tu bundle de Liferay
+- Elegir que te cree un contenido de ejemplo (sugerencia): Y
 
 
 ## Configurar
