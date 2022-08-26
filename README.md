@@ -29,7 +29,7 @@ _(Correrlo como administrador si hay algun error de permisos)_
 - Dejar la descripción sugerida
 - Elegir “Y” en localization support
 - Elegir “n” en configuration support
-- Tipear como nombre de categoría (respetar mayusculas y minúsculas): RxTro
+- Tipear como nombre de categoría (respetar mayusculas y minúsculas): Custom React
 - Configurar la direccion a tu bundle de Liferay
 - Elegir que te cree un contenido de ejemplo (sugerencia): Y
 
