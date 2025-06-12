@@ -28,8 +28,8 @@ _(Correrlo como administrador si hay algun error de permisos)_
     - Nuevas sugerencias...
 - Dejar la descripción sugerida
 - Elegir “Y” en localization support
-- Elegir “n” en configuration support
-- Tipear como nombre de categoría (respetar mayusculas y minúsculas): Custom React
+- Elegir “Y” en configuration support
+- Tipear como nombre de categoría (respetar mayusculas y minúsculas): custom-react
 - Configurar la direccion a tu bundle de Liferay (Ver de usar una variable para que no tener que modificarla cada uno con su path)
 - Elegir que te cree un contenido de ejemplo (sugerencia): Y
 
